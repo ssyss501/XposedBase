@@ -37,7 +37,6 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class whatsapp extends BaseHook {
     String PACKAGE_NAME = "com.whatsapp";
     public Context ctx1;
-    public Class ccc = null;
     public whatsapp.onClickReceiver oCR = null;
 
     //接收界面发来的广播
@@ -53,22 +52,21 @@ public class whatsapp extends BaseHook {
             XposedBridge.log("onClickReceiver 接收");
             String action = intent.getAction();
 
-            if ("com.Xposebase.onClick".equals(action)) {
+            if ("com.xbase.wa.test".equals(action)) {
                 String messagae = intent.getStringExtra("messagae");
                 String phone = intent.getStringExtra("phone");
+
+                 messagae = "测试";
+                 phone = "8615998680323";
+
                 final Class<?> c_UserJid = XposedHelpers.findClass("com.whatsapp.jid.UserJid", cl);
                 try {
-                    Object newInstance = XposedHelpers.newInstance(c_UserJid, phone);
-                    final Class<?> c_0M6 = XposedHelpers.findClass("X.0M6", cl);
-                    final Class<?> c_1Uq = XposedHelpers.findClass("X.1Uq", cl);
-                    final Class<?> c_042 = XposedHelpers.findClass("X.042", cl);
-                    final Class<?> c_0Qb = XposedHelpers.findClass("X.0Qb", cl);
-
-                    Class<?> clazz = XposedHelpers.findClass("com.whatsapp.Conversation", cl);
-                    Object obj = XposedHelpers.getStaticObjectField(c_0M6, "A19");
+                    Object o_UserJid = XposedHelpers.newInstance(c_UserJid, phone);
+                    final Class<?> c_0Kz = XposedHelpers.findClass("X.0Kz", cl);
+                    Object obj = XposedHelpers.getStaticObjectField(c_0Kz, "A1C");
 
                     List<String> li = new ArrayList<>();
-                    XposedHelpers.callMethod(obj, "A0T", Collections.singletonList(newInstance), messagae, null, null, li, false, false, null, null, null);
+                    XposedHelpers.callMethod(obj, "A0U", Collections.singletonList(o_UserJid), messagae, null, null, li, false, false, null, null, null);
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -155,7 +153,7 @@ public class whatsapp extends BaseHook {
                     if (null == oCR) {
                         oCR = new onClickReceiver(cl);
                         // 注册自定义动态广播消息
-                        IntentFilter filter_dynamic = new IntentFilter("com.Xposebase.onClick");
+                        IntentFilter filter_dynamic = new IntentFilter("com.xbase.wa.test");
                         arg.registerReceiver(oCR, filter_dynamic);
                         IntentFilter filter_dynamic2 = new IntentFilter("com.Xposebase.onClick2");
                         arg.registerReceiver(oCR, filter_dynamic2);
