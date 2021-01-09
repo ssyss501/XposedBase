@@ -7,58 +7,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="发文本"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="181dp" />
-
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="32dp" />
-
-    <EditText
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="96dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/IDC_SENDPIC_BT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="发图片视频" />
-
-        <EditText
-            android:id="@+id/IDC_PHONE2_ED"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/IDC_PATH_ED"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="/sdcard/"
-            tools:text="/sdcard/" />
 
         <Button
             android:id="@+id/IDC_START_BT"
@@ -68,9 +20,21 @@
 
         <Button
             android:id="@+id/IDC_LINETEST_BT"
-            android:layout_width="match_parent"
+            android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:text="测试" />
+            android:text="line测试" />
+
+        <Button
+            android:id="@+id/IDC_WA_TEST"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:text="wa测试" />
+
+        <Button
+            android:id="@+id/IDC_VIBERTEST_BT"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:text="viber测试" />
     </LinearLayout>
 
 </LinearLayout>
