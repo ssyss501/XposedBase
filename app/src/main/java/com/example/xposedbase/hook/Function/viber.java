@@ -113,6 +113,7 @@ public class viber extends BaseHook {
                 XposedHelpers.callStaticMethod(c_mn,"a",oparam2,member_obj,z2_obj);
 
                 XposedBridge.log("构造完成");
+
             }
 
         }
