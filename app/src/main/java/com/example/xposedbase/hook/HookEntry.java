@@ -4,6 +4,7 @@ import com.example.xposedbase.hook.Function.Kakaotalk;
 import com.example.xposedbase.hook.Function.dingding;
 import com.example.xposedbase.hook.Function.line;
 import com.example.xposedbase.hook.Function.twitter;
+import com.example.xposedbase.hook.Function.viber;
 import com.example.xposedbase.hook.Function.wechat;
 import com.example.xposedbase.hook.Function.wework;
 import com.example.xposedbase.hook.Function.whatsapp;
@@ -27,9 +28,10 @@ public class HookEntry implements IXposedHookLoadPackage /*, IXposedHookZygoteIn
       //  m_HookList.add(new zalo());
 //        m_HookList.add(new facebook());
         m_HookList.add(new line());
-   //     m_HookList.add(new whatsapp());
+        m_HookList.add(new whatsapp());
   //      m_HookList.add(new twitter());
 //        m_HookList.add(new discord());
+        m_HookList.add(new viber());
     }
 
     @Override
