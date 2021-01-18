@@ -3,7 +3,6 @@ package com.example.xposedbase.hook.Function;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -163,21 +162,6 @@ public class whatsapp extends BaseHook {
                     }
                 }
             });
-
-            final Class<?> c_SQLiteConnection = XposedHelpers.findClass("android.database.sqlite.SQLiteConnection", lpparam.classLoader);
-
-            final Class<?> c_CancellationSignal = XposedHelpers.findClass("android.os.CancellationSignal", lpparam.classLoader);
-            XposedHelpers.findAndHookMethod(c_SQLiteConnection, "executeForLastInsertedRowId",
-                    String.class, Object[].class, c_CancellationSignal, new XC_MethodHook() {
-                        @Override
-                        protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                            super.beforeHookedMethod(param);
-                            XposedBridge.log("当前表:" + (String) param.args[0]);
-
-
-                        }
-
-                    });
 
 
             final Class<?> c_0M6 = XposedHelpers.findClass("X.0M6", lpparam.classLoader);
