@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Looper;
@@ -235,6 +236,94 @@ public class line extends BaseHook {
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                     XposedBridge.log("Context= " );
+                }
+            });
+
+
+            final Class<?> c_x1d = XposedHelpers.findClass("s0.a.a.a.x1.d", lpparam.classLoader);
+            XposedHelpers.findAndHookMethod(c_x1d, "c", new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+            });
+
+
+
+            final Class<?> c_xgc = XposedHelpers.findClass("s0.a.a.a.k.g.c", lpparam.classLoader);
+            XposedHelpers.findAndHookMethod(c_xgc, "d", new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+            });
+
+            XposedHelpers.findAndHookMethod(c_xgc, "b", new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+            });
+
+
+            final Class<?> c_fcb = XposedHelpers.findClass("s0.a.a.a.f.c.b", lpparam.classLoader);
+            XposedHelpers.findAndHookMethod(c_fcb, "H1", new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+
+                    final Class<?> c_U0C = XposedHelpers.findClass("s0.a.a.a.r0.u0.c", lpparam.classLoader);
+                    Object obj = XposedHelpers.getStaticObjectField(c_U0C,"b");
+                    XposedBridge.log("aaaaaaaaa");
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+            });
+
+
+            final Class<?> c_ge0 = XposedHelpers.findClass("s0.a.a.a.g.e0", lpparam.classLoader);
+            final Class<?> c_aam = XposedHelpers.findClass("s0.a.a.a.h.a.a.m", lpparam.classLoader);
+            XposedHelpers.findAndHookMethod(c_aam, "d", SQLiteDatabase.class,c_ge0,String.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= " );
+                }
+            });
+
+
+            final Class<?> c_x1h = XposedHelpers.findClass("s0.a.a.a.x1.h", lpparam.classLoader);
+            XposedBridge.hookAllConstructors(c_x1h, new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
                 }
             });
 

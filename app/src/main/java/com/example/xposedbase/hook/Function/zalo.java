@@ -203,12 +203,162 @@ public class zalo extends BaseHook {
                 }
             });
 
+            XposedHelpers.findAndHookMethod("com.zing.zalo.r.c.a", lpparam.classLoader,"CW", String.class,new XC_MethodHook() {
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                    Log.i("Dump Stack: ", "---------------start-------- CW--------");
+                    Throwable ex = new Throwable();
+                    StackTraceElement[] stackElements = ex.getStackTrace();
+                    if (stackElements != null) {
+                        for (int i = 0; i < stackElements.length; i++) {
+
+                            Log.i("Dump Stack"+i+": ", stackElements[i].getClassName()
+                                    +"----"+stackElements[i].getFileName()
+                                    +"----" + stackElements[i].getLineNumber()
+                                    +"----" +stackElements[i].getMethodName());
+                        }
+                    }
+                    Log.i("Dump Stack: ", "---------------over----------------");
+
+                }
+            });
+
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.r.b", lpparam.classLoader,"cnx",new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                    Log.i("Dump Stack: ", "---------------start----------------");
+                    Throwable ex = new Throwable();
+                    StackTraceElement[] stackElements = ex.getStackTrace();
+                    if (stackElements != null) {
+                        for (int i = 0; i < stackElements.length; i++) {
+
+                            Log.i("Dump Stack"+i+": ", stackElements[i].getClassName()
+                                    +"----"+stackElements[i].getFileName()
+                                    +"----" + stackElements[i].getLineNumber()
+                                    +"----" +stackElements[i].getMethodName());
+                        }
+                    }
+                    Log.i("Dump Stack: ", "---------------over----------------");
+
+                }
+            });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.r.a", lpparam.classLoader,"bS",Context.class,String.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                    Log.i("Dump Stack: ", "---------------start----------------");
+                    Throwable ex = new Throwable();
+                    StackTraceElement[] stackElements = ex.getStackTrace();
+                    if (stackElements != null) {
+                        for (int i = 0; i < stackElements.length; i++) {
+
+                            Log.i("Dump Stack"+i+": ", stackElements[i].getClassName()
+                                    +"----"+stackElements[i].getFileName()
+                                    +"----" + stackElements[i].getLineNumber()
+                                    +"----" +stackElements[i].getMethodName());
+                        }
+                    }
+                    Log.i("Dump Stack: ", "---------------over----------------");
+
+                }
+            });
+
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.r.a", lpparam.classLoader,"f",Context.class,String.class,long.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+
+                }
+            });
+
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.utils.cy", lpparam.classLoader,"oG",Context.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+
+                }
+            });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.utils.cy", lpparam.classLoader,"oX",Context.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+
+                }
+            });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalocore.a.f", lpparam.classLoader,"acp",String.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+
+                }
+            });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.utils.cryptology.AESUtils", lpparam.classLoader,"VT",int.class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+
+                }
+            });
+
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.g.aa", lpparam.classLoader,"aJM",new XC_MethodHook() {
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+            });
+
             XposedHelpers.findAndHookMethod("com.zing.zalocore.connection.g", lpparam.classLoader,"send",new XC_MethodHook() {
                 @Override
                 protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                     XposedBridge.log("Context= ");
                 }
             });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalocore.connection.g", lpparam.classLoader,"a",String.class,String.class,String[].class,String[].class,new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+            });
+
 
             XposedHelpers.findAndHookMethod("com.zing.zalocore.connection.g", lpparam.classLoader,"N",new XC_MethodHook() {
                 @Override
@@ -220,6 +370,18 @@ public class zalo extends BaseHook {
                     XposedBridge.log("Context= ");
                 }
             });
+
+            XposedHelpers.findAndHookMethod("com.zing.zalo.zalosdk.core.helper.e", lpparam.classLoader,"a",String.class, String.class, String[].class, String[].class, String.class, new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                    XposedBridge.log("Context= ");
+                }
+            });
+
 
             XposedHelpers.findAndHookMethod("com.zing.zalocore.connection.g", lpparam.classLoader,"af",Map.class,new XC_MethodHook() {
                 @Override
